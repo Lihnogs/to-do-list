@@ -8,7 +8,7 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "migrate": "prisma migrate deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll=false"
   },
   "keywords": [],
   "author": "",
@@ -21,13 +21,20 @@
     "joi": "^18.0.1",
     "jsonwebtoken": "^9.0.2",
     "prisma": "^6.19.0",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
+    "@types/jest": "^30.0.0",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.10.1",
+    "@types/swagger-ui-express": "^4.1.8",
+    "@types/yamljs": "^0.2.34",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.11",
+    "ts-jest": "^29.4.5",
     "typescript": "^5.9.3"
   }
 }
