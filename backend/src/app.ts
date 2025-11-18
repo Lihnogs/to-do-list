@@ -4,9 +4,14 @@ import taskRoutes from "./routes/taskRoutes";
 import { errorMiddleware } from "./middleware/errorMiddleware";
 import swaggerUi from "swagger-ui-express";
 import YAML from "yamljs";
+import cors from "cors";
 
 const app = express();
 const swaggerDocument = YAML.load("./src/swagger.yaml");
+
+app.use(cors({
+    origin: "*",
+}));
 
 app.use(express.json());
 app.use("/api/auth", authRoutes);

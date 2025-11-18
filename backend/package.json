@@ -10,6 +10,9 @@
     "migrate": "prisma migrate deploy",
     "test": "jest --watchAll=false"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
