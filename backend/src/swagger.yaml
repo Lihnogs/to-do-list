@@ -1,3 +1,4 @@
+openapi: 3.0.0
 info:
   title: To-Do List API
   version: 1.0.0
@@ -103,7 +104,7 @@ components:
           type: boolean
 
 paths:
-  /auth/register:
+  /api/auth/register:
     post:
       summary: Registra um novo usuário
       tags: [Auth]
@@ -123,7 +124,7 @@ paths:
         400:
           description: Email já registrado
 
-  /auth/login:
+  /api/auth/login:
     post:
       summary: Realiza login e retorna um token JWT
       tags: [Auth]
@@ -143,7 +144,7 @@ paths:
         401:
           description: Credenciais inválidas
 
-  /tasks:
+  /api/tasks:
     get:
       summary: Lista tarefas do usuário autenticado
       tags: [Tasks]
@@ -203,7 +204,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Task"
 
-  /tasks/{id}:
+  /api/tasks/{id}:
     get:
       summary: Busca uma tarefa específica
       tags: [Tasks]

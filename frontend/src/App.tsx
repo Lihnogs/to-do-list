@@ -1,5 +1,17 @@
-import AppRouter from "./router/appRouter";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Home from "./pages/Home";
+import PrivateRoute from "./routes/PrivateRoute";
 
 export default function App() {
-  return <AppRouter />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }

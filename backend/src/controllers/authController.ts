@@ -3,6 +3,7 @@ import { registerUser, loginUser } from "../services/authService";
 
 export async function register(req: Request, res: Response, next: NextFunction) {
   try {
+    console.log("entrou aqueee")
     const user = await registerUser(req.body);
     res.status(201).json(user);
   } catch (err) {
